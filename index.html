@@ -1,101 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    {{ header_meta }}
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, user-scalable=no" />
-    <link href="https://fonts.googleapis.com/css?family=Cabin:700|Open+Sans" rel="stylesheet">    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-      rel="stylesheet"
-    />
-    <link href="css/styles.css" rel="stylesheet" />
-    <title>elporfirio.com | Gadgets, Desarrollo Web y Gaming</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="header">
-        <div class="header__background"></div>
-        <div class="header__data-info">
-          <div class="header__data-info__avatar">
-              <img
-                src="https://secure.gravatar.com/avatar/552688e38cc8c229401411ddf36f768d?s=128"
-              />
-          </div>
-
-          <div class="header__data-info__data">
-            <h1>elporfirio.com</h1>
-            <p>gadgets, gaming & webdev</p>
-          </div>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <link href="https://fonts.googleapis.com/css?family=Cabin:700|Open+Sans" rel="stylesheet">    <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+  rel="stylesheet"
+/>
+  <link href="css/styles.css" rel="stylesheet" />
+  <title>elporfirio.com | Gadgets, Desarrollo Web y Gaming</title>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="header__background"></div>
+    <div class="header__data-info">
+      <div class="header__data-info__avatar">
+        <img
+          src="https://secure.gravatar.com/avatar/552688e38cc8c229401411ddf36f768d?s=128"
+        />
       </div>
-      <div class="posts">
-        <h2>Recent Posts</h2>
-        <div class="posts__preview">
-          <div class="posts__preview__tags">
-            <span class="posts__preview__tags__tag">animación</span>
-            <span class="posts__preview__tags__tag">tutoriales</span>
-            <span class="posts__preview__tags__tag">programación</span>
-          </div>
-          <div class="posts__preview__image"
-               style="background: url('https://cdn-images.postach.io/1f408b38-9458-46bc-96c0-63ee1087bba1/18f5ce0a-a801-435b-bb2c-a99b3c04876a/e91cf525-18b7-42d6-b1bb-1f5520a9a706.jpg') center;
-                      background-size: cover;">
-            <a href="">&nbsp;</a>
-          </div>
-          <div class="posts__preview__info">
-            <h3>7 TOOLS THAT HELP WITH BLOG WRITING - BLOGGING 101</h3>
-            <span>posted at: 10 / 10 / 2019</span>
-          </div>
-        </div>
-        <div class="posts__preview">
-          <div class="posts__preview__tags">
-            <span class="posts__preview__tags__tag">animación</span>
-            <span class="posts__preview__tags__tag">programación</span>
-            <span class="posts__preview__tags__tag">programación</span>
-          </div>
-          <div class="posts__preview__image"
-               style="background: url('https://cdn-images.postach.io/1f408b38-9458-46bc-96c0-63ee1087bba1/18f5ce0a-a801-435b-bb2c-a99b3c04876a/e91cf525-18b7-42d6-b1bb-1f5520a9a706.jpg') center;
-                      background-size: cover;">
-            <a href="">&nbsp;</a>
-          </div>
-          <div class="posts__preview__info">
-            <h3>7 TOOLS THAT HELP WITH BLOG WRITING - BLOGGING 101</h3>
-            <span>posted at: 10 / 10 / 2019</span>
-          </div>
-        </div>
-        <div class="posts__preview">
-          <div class="posts__preview__tags">
-            <span class="posts__preview__tags__tag">animación</span>
-            <span class="posts__preview__tags__tag">tutoriales</span>
-            <span class="posts__preview__tags__tag">programación</span>
-          </div>
-          <div class="posts__preview__image"
-               style="background: url('https://cdn-images.postach.io/1f408b38-9458-46bc-96c0-63ee1087bba1/18f5ce0a-a801-435b-bb2c-a99b3c04876a/e91cf525-18b7-42d6-b1bb-1f5520a9a706.jpg') center;
-                      background-size: cover;">
-            <a href="">&nbsp;</a>
-          </div>
-          <div class="posts__preview__info">
-            <h3>7 TOOLS THAT HELP WITH BLOG WRITING - BLOGGING 101</h3>
-            <span>posted at: 10 / 10 / 2019</span>
-          </div>
-        </div>
-        <hr/>
 
-      </div>
-      <div class="footer">
-        <p>elporfirio.com</p>
+      <div class="header__data-info__data">
+        <h1>elporfirio.com</h1>
+        <p>gadgets, gaming & webdev</p>
       </div>
     </div>
-    {% if site.analytics %}
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', '{{ site.analytics }}']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = 'https://ssl.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-    {% endif %}
-  </body>
+  </div>
+  {% if is_blog or is_home %}
+  <div class="posts">
+    <h2>Recent Posts</h2>
+    {% for post in posts %}
+      <div class="posts__preview">
+      <div class="posts__preview__image"
+           style="background: url('https://cdn-images.postach.io/1f408b38-9458-46bc-96c0-63ee1087bba1/18f5ce0a-a801-435b-bb2c-a99b3c04876a/e91cf525-18b7-42d6-b1bb-1f5520a9a706.jpg') center;
+                      background-size: cover;">
+        <a title="{{ post.title }}" href="{{ post.url }}">&nbsp;</a>
+      </div>
+      <div class="posts__preview__tags">
+        {% for tag in post.tags %}
+        <span class="posts__preview__tags__tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      <div class="posts__preview__info">
+        <h3>{{ post.title|truncate(50) }}</h3>
+        <span>{{ post.created_at|format_date }}</span>
+        <hr />
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+  <div class="controls">
+    <a href="#" class="next-posts">Siguientes <i class="fas fa-angle-double-right"></i></a>
+    <a href="#" class="prev-posts"><i class="fas fa-angle-double-left"></i> Anteriores</a>
+  </div>
+  <div class="follow">
+    <a href="https://twitter.com/elporfirio"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.youtube.com/user/elporfirio"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.twitch.tv/elporfirio"><i class="fab fa-twitch"></i></a>
+    <a href="https://www.instagram.com/elporfirio/"><i class="fab fa-instagram"></i></a>
+  </div>
+  <div class="footer">
+    <p>elporfirio.com 2006-2019</p>
+  </div>
+</div>
+<script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+</body>
 </html>

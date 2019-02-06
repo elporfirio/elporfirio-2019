@@ -1,7 +1,9 @@
 html,
 body {
   height: 100%;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  color: whitesmoke;
+  background-color: black; }
 
 h1 {
   font-family: "Cabin", sans-serif; }
@@ -14,15 +16,15 @@ h1 {
     flex: 2;
     display: flex;
     flex-direction: column;
-    background-color: palegoldenrod; }
+    background-color: black; }
     .container .header__background {
       flex: 6;
-      background-color: blue;
-      min-height: 80px; }
+      background: url("../img/2019-02.jpg") center;
+      background-size: cover;
+      min-height: 140px; }
     .container .header__data-info {
       flex: 2;
-      display: flex;
-      background-color: paleturquoise; }
+      display: flex; }
       .container .header__data-info__avatar {
         flex: 2;
         display: flex;
@@ -37,66 +39,31 @@ h1 {
           margin-right: 8%; }
       .container .header__data-info__data {
         flex: 4;
-        margin-top: -30px;
-        background-color: aquamarine; }
+        margin-top: -30px; }
+        .container .header__data-info__data h1 {
+          color: black; }
+        .container .header__data-info__data p {
+          color: whitesmoke; }
         .container .header__data-info__data h1,
         .container .header__data-info__data p {
           margin-top: 0;
           margin-bottom: 2%; }
   .container .posts {
     flex: 10;
-    background-color: green;
     padding: 0 4%; }
     .container .posts__preview {
       display: flex;
       flex-direction: column;
-      background-color: aquamarine;
       margin-bottom: 10%; }
       .container .posts__preview__tags {
         flex: 1;
         display: flex;
         justify-content: flex-end;
-        position: relative; }
-        .container .posts__preview__tags__tag:not(:last-child) {
-          height: 100%;
-          white-space: nowrap;
-          position: relative;
-          padding: 1% 4% 1% 2%;
-          background-color: yellow; }
-          .container .posts__preview__tags__tag:not(:last-child):hover {
-            background-color: rebeccapurple; }
-            .container .posts__preview__tags__tag:not(:last-child):hover:before {
-              background-color: rebeccapurple; }
-          .container .posts__preview__tags__tag:not(:last-child):before {
-            content: " ";
-            width: 10%;
-            height: 100%;
-            display: block;
-            background-color: yellow;
-            transform: skewX(-20deg);
-            position: absolute;
-            left: -5%;
-            top: 0; }
-        .container .posts__preview__tags__tag:last-child {
-          height: 100%;
-          white-space: nowrap;
-          position: relative;
-          padding: 1% 4% 1% 2%;
-          background-color: brown; }
-          .container .posts__preview__tags__tag:last-child:hover {
-            background-color: rebeccapurple; }
-            .container .posts__preview__tags__tag:last-child:hover:before {
-              background-color: rebeccapurple; }
-          .container .posts__preview__tags__tag:last-child:before {
-            content: " ";
-            width: 10%;
-            height: 100%;
-            display: block;
-            background-color: brown;
-            transform: skewX(-20deg);
-            position: absolute;
-            left: -5%;
-            top: 0; }
+        position: relative;
+        color: dodgerblue;
+        font-size: 0.9em; }
+        .container .posts__preview__tags__tag {
+          margin: 1% 1%; }
       .container .posts__preview__image {
         flex: 4;
         height: 200px; }
@@ -111,15 +78,52 @@ h1 {
           text-transform: uppercase;
           font-family: "Cabin", sans-serif;
           margin: 1%;
-          font-size: 1.5em;
-          text-align: center; }
+          font-size: 1.3em;
+          text-align: center;
+          letter-spacing: -1%; }
         .container .posts__preview__info span {
+          color: gray;
+          font-size: 0.8em;
           margin-top: 2%;
           display: block;
           text-align: right;
           padding: 2%; }
+        .container .posts__preview__info hr {
+          border: 1px solid gray; }
+  .container .controls a {
+    text-decoration: none;
+    display: block;
+    width: 40%;
+    background-color: firebrick;
+    text-align: center;
+    color: whitesmoke;
+    padding: 4% 4%;
+    border-radius: 2%; }
+    .container .controls a:hover {
+      background-color: #871a1a; }
+  .container .controls .next-posts {
+    float: right; }
+  .container .controls .prev-posts {
+    float: left; }
+  .container .controls:after {
+    content: '';
+    display: block;
+    clear: both; }
+  .container .follow {
+    text-align: center;
+    margin-top: 8%;
+    font-size: 2em; }
+    .container .follow a {
+      color: whitesmoke;
+      display: inline-block;
+      padding: 0 4%;
+      text-decoration: none; }
   .container .footer {
     flex: 1;
-    background-color: palevioletred; }
+    margin-top: 8%;
+    padding: 1% 8%;
+    background-color: #333;
+    text-align: right;
+    font-size: 0.8em; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -2,6 +2,8 @@ html,
 body {
   height: 100%;
   font-family: "Open Sans", sans-serif;
+  color: whitesmoke;
+  background-color: black;
 }
 
 h1 {
@@ -17,18 +19,19 @@ h1 {
     flex: 2;
     display: flex;
     flex-direction: column;
-    background-color: palegoldenrod;
+    background-color: black;
 
     &__background {
       flex: 6;
-      background-color: blue;
-      min-height: 80px;
+      //background-color: blue;
+      background: url("../img/2019-02.jpg") center;
+      background-size: cover;
+      min-height: 140px;
     }
 
     &__data-info {
       flex: 2;
       display: flex;
-      background-color: paleturquoise;
 
       &__avatar {
         flex: 2;
@@ -49,7 +52,14 @@ h1 {
       &__data {
         flex: 4;
         margin-top: -30px;
-        background-color: aquamarine;
+
+        h1 {
+          color: black;
+        }
+
+        p {
+          color: whitesmoke;
+        }
 
         h1,
         p {
@@ -62,75 +72,27 @@ h1 {
 
   .posts {
     flex: 10;
-    background-color: green;
     padding: 0 4%;
 
     &__preview {
       display: flex;
       flex-direction: column;
-      background-color: aquamarine;
       margin-bottom: 10%;
 
       &__tags {
         flex: 1;
-        //background-color: red;
         display: flex;
         justify-content: flex-end;
         position: relative;
-        &__tag:not(:last-child) {
-          &:hover {
-            background-color: rebeccapurple;
-            &:before {
-              background-color: rebeccapurple;
-            }
-          }
-          &:before {
-            content: " ";
-            width: 10%;
-            height: 100%;
-            display: block;
-            background-color: yellow;
-            transform: skewX(-20deg);
-            position: absolute;
-            left: -5%;
-            top: 0;
-          }
-          height: 100%;
-          white-space: nowrap;
-          position: relative;
-          padding: 1% 4% 1% 2%;
-          background-color: yellow;
-        }
-        &__tag:last-child {
-          &:hover {
-            background-color: rebeccapurple;
-            &:before {
-              background-color: rebeccapurple;
-            }
-          }
-          &:before {
-            content: " ";
-            width: 10%;
-            height: 100%;
-            display: block;
-            background-color: brown;
-            transform: skewX(-20deg);
-            position: absolute;
-            left: -5%;
-            top: 0;
-          }
-          height: 100%;
-          white-space: nowrap;
-          position: relative;
-          padding: 1% 4% 1% 2%;
-          background-color: brown;
+        color: dodgerblue;
+        font-size: 0.9em;
+        &__tag {
+          margin: 1% 1%;
         }
       }
 
       &__image {
         flex: 4;
-        //background-size: cover;
-        //background-position: center;
         height: 200px;
 
         a {
@@ -147,21 +109,75 @@ h1 {
           text-transform: uppercase;
           font-family: "Cabin", sans-serif;
           margin: 1%;
-          font-size: 1.5em;
+          font-size: 1.3em;
           text-align: center;
+          letter-spacing: -1%;
         }
         span {
+          color: gray;
+          font-size: 0.8em;
           margin-top: 2%;
           display: block;
           text-align: right;
           padding: 2%;
         }
+
+        hr {
+          border: 1px solid gray;
+        }
       }
+    }
+  }
+
+  .controls {
+    a {
+      text-decoration: none;
+      display: block;
+      width: 40%;
+      background-color: firebrick;
+      text-align: center;
+      color: whitesmoke;
+      padding: 4% 4%;
+      border-radius: 2%;
+
+      &:hover {
+        background-color: darken(firebrick, 10%);
+      }
+    }
+
+    .next-posts {
+      float: right;
+    }
+
+    .prev-posts {
+      float: left;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+
+  .follow {
+    text-align: center;
+    margin-top: 8%;
+    font-size: 2em;
+    a {
+      color: whitesmoke;
+      display: inline-block;
+      padding: 0 4%;
+      text-decoration: none;
     }
   }
 
   .footer {
     flex: 1;
-    background-color: palevioletred;
+    margin-top: 8%;
+    padding: 1% 8%;
+    background-color: #333;
+    text-align: right;
+    font-size: 0.8em;
   }
 }
