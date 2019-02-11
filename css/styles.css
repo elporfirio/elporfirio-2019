@@ -81,6 +81,11 @@ h1 {
           font-size: 1.3em;
           text-align: center;
           letter-spacing: -1%; }
+          .container .posts__preview__info h3 a {
+            text-decoration: none;
+            color: whitesmoke; }
+            .container .posts__preview__info h3 a:hover {
+              text-decoration: underline; }
         .container .posts__preview__info span {
           color: gray;
           font-size: 0.8em;
@@ -125,5 +130,10 @@ h1 {
     background-color: #333;
     text-align: right;
     font-size: 0.8em; }
+  .container .single-post {
+    flex: 10;
+    padding: 10% 4% 4%; }
+    .container .single-post img {
+      width: 100%; }
 
 /*# sourceMappingURL=styles.css.map */

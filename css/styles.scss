@@ -112,6 +112,14 @@ h1 {
           font-size: 1.3em;
           text-align: center;
           letter-spacing: -1%;
+
+          a {
+            text-decoration: none;
+            color: whitesmoke;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
         }
         span {
           color: gray;
@@ -179,5 +187,14 @@ h1 {
     background-color: #333;
     text-align: right;
     font-size: 0.8em;
+  }
+
+  .single-post {
+    flex: 10;
+    padding: 10% 4% 4%;
+
+    img {
+      width: 100%;
+    }
   }
 }
